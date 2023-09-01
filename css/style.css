@@ -2,12 +2,12 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
-[class^='col']{
+/* [class^='col']{
   background-color: darkgrey;
   border: 1px solid white;
   min-height: 20px;
   min-width: 20px;
-}
+} */
 
 :root{
   --nav-gray:rgb(248, 249, 250);
@@ -20,6 +20,21 @@ body{
 li{
   list-style: none;
 }
+
+.bnt_offcava{
+margin: 5px 20px;
+padding: 0px 15px;
+}
+
+.fs_offcava{
+  font-size: 2rem;
+  margin: 0;
+}
+
+.bg-badge{
+  background-color: var(--bottom-blue-dark);
+}
+
 
 .debug{
   background-color: rgba(255, 0, 0, 0.39);
@@ -57,13 +72,17 @@ table{
   background-color: var(--boolean-bar);
 }
 
+.bg_custom{
+  background-image:url(/dashboard-assets/img/sidebar-bg.png);
+  background-color:var(--sidebar-bluedark) ;
+}
 .nav_bar_vv{
 height: 80px;
 }
 
 .image_nav{
-  width: 40%;
-  height: 40%;
+  width: 50%;
+  height: 50%;
 }
 
 img{
