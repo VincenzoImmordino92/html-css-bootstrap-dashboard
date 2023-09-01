@@ -36,9 +36,12 @@
 <body>
   
   <header >
-    <nav class="navbar nav_bar_vv bg-body-tertiary py-3 ">
+    <!-- navbar -->
+    <nav class="navbar nav_bar_vv bg-body-tertiary py-3">
+      <!-- container fluid -->
       <div class="container-fluid row-cols-3 bg-white">
-          <div class="col-1 d-xl-none">
+        <!-- colonna con logo -->
+          <div class="col-2 d-xl-none">
             <div class="image_nav">
               <img src="./dashboard-assets/img/mobile-logo.png" alt="">
             </div>
@@ -48,29 +51,30 @@
             <img src="./dashboard-assets/img/logo.svg" alt="">
             </div>
           </div>
-
+        <!-- colonna con il serch-->
           <div class="col-8">
           <form role="search">
             <input class="form-control me-2" type="search" placeholder="Provare a cercare: Lezione di Laravel" aria-label="Search">
           </form>
           </div>
-
-            <div class="col-1">
-              <div class="row row-cols-4 d-none">
+        <!-- colonna con il dropdown -->
+            <div class="col-2">
+              <div class="row row-cols-xl-4 d-none d-xl-inline">
                 <i class="fa-solid fa-bars"></i>
                 <i class="fa-solid fa-question"></i>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
-              </div>
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-bell"></i>
               </a>
+              
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="#">Profilo</a></li>
                 <li><a class="dropdown-item" href="#">Fatturazione</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Logout</a></li>
               </ul>
-              
+              </div>
             </div>
           
         
@@ -81,9 +85,7 @@
 
   <main class="d-flex">
     
-    
-    
-    <aside class=" debug d-flex flex-column justify-content-between py-3">
+    <aside class="bg_custom d-flex flex-column justify-content-between py-3">
       <div class="debug2 d-flex flex-column align-items-center">
         <ul class="menu_v py-3">
 
@@ -106,20 +108,24 @@
         
     </aside>
     
-      <div class="box_content overflow-auto bg-primary">
-        <div class="container-fluid">
-          <div class="box-content-top row row-cols-1 row row-cols-xl-3 debug3 h-25">
+      <div class="box_content overflow-auto">
+        <div class="container-fluid bg-primary text-white">
+          <div class="box-content-top
+                      row row-cols-1 
+                      row row-cols-xl-1 
+                      justify-content-between 
+                      ">
             
-            <div class="col order-md-last">
+            <div class="col col-xl-2 mx-2 my-2 order-xl-last">
               <span>Nuovi Studenti</span>
               <button
-                class="btn btn-primary"
+                class="btn bnt_offcava btn-primary border-white "
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight"
                 >
-                  +
+                  <p class="fs_offcava">+</p>
                 </button>
             
                 <div
@@ -144,8 +150,21 @@
 
     
             </div>
-            <div class="col"><h2>Boolean</h2></div>
-            <div class="col">studenti online </div>
+            <div class="col col-xl-5 flex-wrap">
+              <h2>Boolean</h2>
+              <span class="badge rounded-pill bg-badge">Piano blaze</span>
+              <span class="badge rounded-pill bg-badge">3 app</span>
+              <i class="fa-solid fa-angles-right my-2 "></i>
+              <span class="badge rounded-pill bg-badge d-xl-none">+</span>
+              <span class="badge rounded-pill bg-badge d-none d-xl-inline-block">Boolean mobile app</span>
+              <span class="badge rounded-pill bg-badge d-none d-xl-inline-block">Boolean web app</span>
+              <span class="badge rounded-pill bg-badge d-none d-xl-inline-block">Boolean blog app</span>
+            </div>
+            <div class="col col-xl-4 my-4">
+              <h6>Studenti online negli ultimi 30 minuti</h6>
+              <h2>125</h2>
+              
+            </div>
           </div>
 
         </div>
@@ -280,7 +299,7 @@
 
               </div>
               <div class="my-3">
-                <!-- card Prossime classi -->
+                <!-- card accordion classi -->
                 <div class="card">
                   <div class="card-header">
                     <h2>F.A.Q</h2>
