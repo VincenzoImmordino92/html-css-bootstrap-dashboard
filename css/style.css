@@ -2,6 +2,13 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+[class^='col']{
+  background-color: darkgrey;
+  border: 1px solid white;
+  min-height: 20px;
+  min-width: 20px;
+}
+
 :root{
   --nav-gray:rgb(248, 249, 250);
   --nav-white:rgb(255, 255, 255);
@@ -10,18 +17,39 @@ body{
   --bottom-blue-dark:rgb(22, 91, 186);
 }
 
+li{
+  list-style: none;
+}
+
 .debug{
-  background-color: rgba(0, 255, 255, 0.24);
+  background-color: rgba(255, 0, 0, 0.39);
   min-height: 50px;
 }
 
 .debug2{
-  background-color: rgba(255, 0, 0, 0.233);
-  min-height: 50px;
+  background-color: rgb(17, 99, 206);  
 }
 
-.nav-bar{
-  background-color: var(--nav-gray);
+.debug3{
+  background-color: rgba(7, 243, 78, 0.541);  
+}
+
+.debug4{
+  background-color: rgba(255, 155, 4, 0.774); 
+  border: 1px solid white; 
+}
+
+.bg-gray{
+  background-color: var(--boolean-bar);
+}
+
+.nav_bar_vv{
+height: 80px;
+}
+
+.image_nav{
+  width: 40%;
+  height: 40%;
 }
 
 img{
@@ -29,22 +57,56 @@ img{
   height: 100%;
 }
 
-.sidebar{
-  width: 80px;
-  background-color: black;
+
+main{
   height: calc(100vh - 80px);
+}
+
+
+aside{
+  width: 80px;
   color: white;
 }
 
-.sidebar-top{
-  height: 80%;
+aside a{
+  color: white;
 }
 
-.sidebar-bottom{
-  height: 20px;
+.menu_v{
+  padding: 0;
+  margin: 0;
 }
 
-.content-small{
-  height: calc(100vh - 90px);
-  width: ;
+.menu_v li{
+  padding: 5px 0;
+}
+
+aside li a i,i{
+  font-size: 1.2rem;
+}
+
+
+.box_content{
+  width: calc(100vw - 80px);
+}
+
+.offcanvas.offcanvas-big{
+  width: 100%;
+}
+
+.image-table{
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (min-width:1200px) {
+  aside{
+    width: 160px;
+    color: white;
+  }
+
+  .offcanvas.offcanvas-big{
+    width: 40%;
+  }
+
 }

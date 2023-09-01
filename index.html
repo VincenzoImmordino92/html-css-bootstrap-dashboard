@@ -21,19 +21,32 @@
 
 <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
 
+<!-- <i class="fa-solid fa-house"></i>
+
+<i class="fa-solid fa-chart-simple"></i>
+
+<i class="fa-solid fa-signal"></i>
+ -->
+
+
+
 </head>
 
 
 <body>
   
-  <header>
-    <nav class="navbar bg-body-tertiary py-3 ">
+  <header >
+    <nav class="navbar nav_bar_vv bg-body-tertiary py-3 ">
       <div class="container-fluid row-cols-3 bg-white">
           <div class="col-1 d-xl-none">
-            <img src="./dashboard-assets/img/mobile-logo.png" alt="">
+            <div class="image_nav">
+              <img src="./dashboard-assets/img/mobile-logo.png" alt="">
+            </div>
           </div>
           <div class="col-xl-2 d-none d-xl-inline-block">
+            <div class="image_nav">
             <img src="./dashboard-assets/img/logo.svg" alt="">
+            </div>
           </div>
 
           <div class="col-8">
@@ -66,27 +79,261 @@
   </header>
 
 
-  <main class="content-big">
+  <main class="d-flex">
+    
+    
+    
+    <aside class=" debug d-flex flex-column justify-content-between py-3">
+      <div class="debug2 d-flex flex-column align-items-center">
+        <ul class="menu_v py-3">
 
-    <div class="sidebar row flex-column justify-content-between text-center">
-      
-        <div class="col flex-column sidebar-top debug">
-          <div class="row mt-3">
-            <i class="fa-solid fa-house"></i>
+          <li><a href="#"><i class="fa-solid fa-house"></i>
+            <span class="d-none d-xl-inline-block">home</span></a></li>
+
+          <li><a href="#"><i class="fa-solid fa-chart-simple"></i>
+            <span class="d-none d-xl-inline-block">Stats</span></a></li>
+
+          <li><a href="#"><i class="fa-solid fa-signal"></i>
+            <span class="d-none d-xl-inline-block">Signals</span></a></li>
+            
+        </ul>
+      </div>
+
+      <div class="debug2 d-flex flex-column align-items-center">
+        <a href=""><i class="fa-solid fa-gear"></i>
+          <span class="d-none d-xl-inline-block">Admin</span></a>
+      </div>
+        
+    </aside>
+    
+      <div class="box_content overflow-auto bg-primary">
+        <div class="container-fluid">
+          <div class="box-content-top row row-cols-1 row row-cols-xl-3 debug3 h-25">
+            
+            <div class="col order-md-last">
+              <span>Nuovi Studenti</span>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+                >
+                  +
+                </button>
+            
+                <div
+                  class="offcanvas offcanvas-big offcanvas-end"
+                  tabindex="-1"
+                  id="offcanvasRight"
+                  aria-labelledby="offcanvasRightLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                      Offcanvas right
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body">ciao</div>
+                </div>
+
+    
+            </div>
+            <div class="col"><h2>Boolean</h2></div>
+            <div class="col">studenti online </div>
           </div>
-          <div class="row mt-3">
-            <i class="fa-solid fa-chart-simple"></i>
-          </div>
-          <div class="row mt-3">
-            <i class="fa-solid fa-signal"></i>
-          </div>
+
         </div>
 
-        <div class="col sidebar-bottom  debug2">
-          <div>
-            <i class="fa-solid fa-gear"></i>
+        <div class="container-fluid">
+          <div class="row row-cols-1  row-cols-lg-2  my-3">
+            <div class="col col-lg-8">
+              <div class="my-3">
+
+                <div class="card">
+                  <div class="card-header">
+                    <h2>Prossime classi</h2>
+                  </div>
+                  <div class="card-body">
+
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Nome</th>
+                          <th scope="col">Data Inizio</th>
+                          <th scope="col">ROI</th>
+                          <th scope="col">Stato</th>
+                          <th scope="col">Azioni</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row d-flex">
+                            <div class="image-table">
+                              <img src="./dashboard-assets/img/class-avatar.jpg" alt="">
+                            </div>
+                            
+                            <div>Classe 75</div>
+                            </th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td colspan="2">Larry the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">5</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">6</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">7</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">8</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="my-3">
+
+                <div class="card">
+                  <div class="card-header">
+                    <h2>F.A.Q</h2>
+                  </div>
+                  <div class="card-body">
+
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Accordion Item #1
+                          </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Accordion Item #2
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Accordion Item #3
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col col-lg-4">
+              <div class="my-3">
+                <div class="card">
+                  <div class="card-header">
+                    <h2>Prossime classi</h2>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                        <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                        <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                      </li>
+                    </ul>
+                    
+                    </div>
+              </div>
+              <div class="my-3">
+                <div class="card">
+                  <img src="./dashboard-assets/img/stats.jpeg" class="card-img-top" alt="stats">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    
+                  </div>
+                </div>
+              </div>
+            
+            </div>
           </div>
         </div>
+          
+        </div>
+        
+
+
+
+
+
+
       </div>
     
   </main>
