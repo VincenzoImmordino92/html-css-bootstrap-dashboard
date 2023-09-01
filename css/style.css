@@ -39,6 +39,20 @@ li{
   border: 1px solid white; 
 }
 
+.table tbody th img:first-child{
+  width: 25px;
+  height: 25px;
+}
+
+table{
+  font-size: 0.9rem;
+}
+
+
+.th_space{
+  width: 100px;
+}
+
 .bg-gray{
   background-color: var(--boolean-bar);
 }
@@ -108,5 +122,6 @@ aside li a i,i{
   .offcanvas.offcanvas-big{
     width: 40%;
   }
+
 
 }
