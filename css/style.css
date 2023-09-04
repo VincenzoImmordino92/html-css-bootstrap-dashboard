@@ -112,7 +112,12 @@ aside a{
   text-decoration: none;
 }
 
-aside:hover
+aside div a{
+  color: white;
+  text-decoration: none;
+}
+
+
 
 .menu_v{
   padding: 0;
