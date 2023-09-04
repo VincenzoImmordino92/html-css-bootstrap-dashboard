@@ -39,43 +39,70 @@
     <!-- navbar -->
     <nav class="navbar nav_bar_vv bg-body-tertiary py-3">
       <!-- container fluid -->
-      <div class="container-fluid row-cols-3 bg-white">
-        <!-- colonna con logo -->
-          <div class="col-2 d-xl-none">
-            <div class="image_nav">
-              <img src="./dashboard-assets/img/mobile-logo.png" alt="">
-            </div>
-          </div>
-          <div class="col-xl-2 d-none d-xl-inline-block">
-            <div class="image_nav">
-            <img src="./dashboard-assets/img/logo.svg" alt="">
-            </div>
-          </div>
-        <!-- colonna con il serch-->
-          <div class="col-8">
-          <form role="search">
-            <input class="form-control me-2" type="search" placeholder="Provare a cercare: Lezione di Laravel" aria-label="Search">
-          </form>
-          </div>
-        <!-- colonna con il dropdown -->
-            <div class="col-2">
-              <div class="row row-cols-xl-4 d-none d-xl-inline">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-question"></i>
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-              
-              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-bell"></i>
-              </a>
-              
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Profilo</a></li>
-                <li><a class="dropdown-item" href="#">Fatturazione</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
-              </ul>
+      <div class="container-fluid bg-white">
+        <div class="row w-100 align-items-center">
+          <!-- colonna con logo -->
+          <div class="col-auto">
+            <div class="d-xl-none">
+              <div class="image_nav">
+                <img src="./dashboard-assets/img/mobile-logo.png" alt="">
               </div>
             </div>
+            <div class="d-none d-xl-inline-block">
+              <div class="">
+              <img src="./dashboard-assets/img/logo.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- colonna con il serch-->
+            <div class="col">
+              <nav class="navbar bg-body-tertiary">
+                <form class="container-fluid">
+                  <div class="input-group">
+                    <span class="input-group-text bg_gray" id="basic-addon1">
+                      <i class="fa-solid fa-chart-simple"></i>
+                    </span>
+                    <input type="text" class="form-control bg_gray" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </form>
+              </nav>
+            </div>
+          <!-- colonna con il dropdown -->
+              <div class="col-auto">
+                <div class="container">
+  
+                  <div class="row text-center">
+                    <div class="col d-none d-xl-inline">
+                      <i class="fa-solid fa-bars"></i>
+                    </div>
+                    
+                    <div class="col d-none d-xl-inline">
+                      <i class="fa-solid fa-question"></i>
+                    </div>
+                    
+                    <div class="col d-none d-xl-inline">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    
+                  <div class="col text-end">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="c_io fa-solid fa-bell"></i>
+                    </a>
+                    
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Profilo</a></li>
+                      <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                  </div>
+                  </div>
+                </div>
+              </div>
+          <!-- /colonna con il dropdown -->
+
+
+        </div>
           
         
         </div>
@@ -86,23 +113,35 @@
   <main class="d-flex">
     
     <aside class="bg_custom d-flex flex-column justify-content-between py-3">
-      <div class="debug2 d-flex flex-column align-items-center">
-        <ul class="menu_v py-3">
+      <div class="d-flex flex-column align-items-center">
+        <ul class="menu_v d-flex flex-column p-3 w-100">
 
-          <li><a href="#"><i class="fa-solid fa-house"></i>
-            <span class="d-none d-xl-inline-block">home</span></a></li>
+          <li class="btn btn-secondary my-2">
+            <a href="#">
+              <i class="fa-solid fa-house"></i>
+            <span class="d-none d-xl-inline-block">Home</span>
+          </a>
+          </li>
 
-          <li><a href="#"><i class="fa-solid fa-chart-simple"></i>
-            <span class="d-none d-xl-inline-block">Stats</span></a></li>
+          <li class="btn btn-secondary my-2">
+            <a href="#">
+              <i class="fa-solid fa-chart-simple"></i>
+            <span class="d-none d-xl-inline-block">Stats</span>
+          </a>
+          </li>
 
-          <li><a href="#"><i class="fa-solid fa-signal"></i>
-            <span class="d-none d-xl-inline-block">Signals</span></a></li>
+          <li class="btn btn-secondary my-2">
+            <a href="#">
+              <i class="fa-solid fa-signal"></i>
+            <span class="d-none d-xl-inline-block">Signals</span>
+          </a>
+          </li>
             
         </ul>
       </div>
 
-      <div class="debug2 d-flex flex-column align-items-center">
-        <a href=""><i class="fa-solid fa-gear"></i>
+      <div class="d-flex flex-column align-items-center">
+        <a class="btn btn-primary" href=""><i class="fa-solid fa-gear"></i>
           <span class="d-none d-xl-inline-block">Admin</span></a>
       </div>
         
@@ -113,10 +152,9 @@
           <div class="box-content-top
                       row row-cols-1 
                       row row-cols-xl-1 
-                      justify-content-between 
-                      ">
+                      justify-content-between">
             
-            <div class="col col-xl-2 mx-2 my-2 order-xl-last">
+            <div class="col py-3 col-xl-3 order-xl-last">
               <span>Nuovi Studenti</span>
               <button
                 class="btn bnt_offcava btn-primary border-white "
@@ -136,7 +174,7 @@
                 >
                   <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasRightLabel">
-                      Offcanvas right
+                      Inserisci nuovo studente
                     </h5>
                     <button
                       type="button"
@@ -145,14 +183,78 @@
                       aria-label="Close"
                     ></button>
                   </div>
-                  <div class="offcanvas-body">ciao</div>
+                  <div class="offcanvas-body">
+                    
+                    <form class="row g-3">
+                      
+                      <div class="col-md-6">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" aria-label="nome">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="cognome" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="cognome" aria-label="cognome">
+                      </div>
+                      
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                      </div>
+                      <div class="col-12">
+                        <label for="indirizzo" class="form-label">Indirizzo</label>
+                        <input type="text" class="form-control" id="indirizzo">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Città</label>
+                        <input type="text" class="form-control" id="inputCity">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="inputState" class="form-label">Stato</label>
+                        <select id="inputState" class="form-select">
+                          <option selected>Scegli...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="cap" class="form-label">CAP</label>
+                        <input type="text" class="form-control" id="cap">
+                      </div>
+                      <div class="mb-3">
+                        <label for="basic-url" class="form-label">Foto</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="basic-addon3">Scegli File</span>
+                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                        </div>
+                        <div class="form-text" id="basic-addon4"></div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Seleziona per proseguire
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Salva</button>
+                        <button type="reset" class="btn btn-warning">Svuota</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
 
     
             </div>
-            <div class="col col-xl-5 flex-wrap">
-              <h2>Boolean</h2>
-              <span class="badge rounded-pill bg-badge">Piano blaze</span>
+            <div class="col py-3 col-xl-5 flex-wrap align-items-center">
+              <div>
+                <h2 class="d-inline ">Boolean</h2>
+                <span class="badge rounded-pill bg-badge">Piano blaze</span>
+              </div>
+              
               <span class="badge rounded-pill bg-badge">3 app</span>
               <i class="fa-solid fa-angles-right my-2 "></i>
               <span class="badge rounded-pill bg-badge d-xl-none">+</span>
@@ -160,7 +262,7 @@
               <span class="badge rounded-pill bg-badge d-none d-xl-inline-block">Boolean web app</span>
               <span class="badge rounded-pill bg-badge d-none d-xl-inline-block">Boolean blog app</span>
             </div>
-            <div class="col col-xl-4 my-4">
+            <div class="col py-3 col-xl-4">
               <h6>Studenti online negli ultimi 30 minuti</h6>
               <h2>125</h2>
               
@@ -185,23 +287,23 @@
 
                         <tr>
                           <th class="" scope="col">Nome</th>
-                          <th class="th_space d-none d-md-table-cell " scope="col">Data Inizio</th>
-                          <th class="th_space d-none d-md-table-cell text-left" scope="col">Roi</th>
-                          <th class="th_space" scope="col">Stato</th>
-                          <th class="th_space" scope="col">Azione</th>
+                          <th class="text-center th_space d-none d-md-table-cell " scope="col">Data Inizio</th>
+                          <th class="text-center th_space d-none d-md-table-cell " scope="col">Roi</th>
+                          <th class="text-center th_space" scope="col">Stato</th>
+                          <th class="text-center th_space" scope="col">Azione</th>
                         </tr>
                       
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">
+                          <th scope="row" class="alig">
                             <img src="./dashboard-assets/img/class-avatar.jpg" alt="">
                             <span class="mx-2">Classe 75</span>
                           </th>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">15 Feb 2021</span></td>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">20%</span></td>
-                          <td><span class="badge rounded-pill text-bg-success">Dome</span></td>
-                          <td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">15 Feb 2021</span></td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">20%</span></td>
+                          <td class="text-center"><span class="badge rounded-pill text-bg-success">Dome</span></td>
+                          <td class="text-center">
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class="py-1 fa-solid fa-pencil"></i></button>
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class=" py-1 fa-solid fa-trash"></i></button>
                           </td>
@@ -212,10 +314,10 @@
                             <img src="./dashboard-assets/img/class-avatar.jpg" alt="">
                             <span class="mx-2">Classe 76</span>
                           </th>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">16 Feb 2021</span></td>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">20%</span></td>
-                          <td><span class="badge rounded-pill text-bg-success">Dome</span></td>
-                          <td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">16 Feb 2021</span></td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">20%</span></td>
+                          <td class="text-center"><span class="badge rounded-pill text-bg-success">Dome</span></td>
+                          <td class="text-center">
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class="py-1 fa-solid fa-pencil"></i></button>
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class=" py-1 fa-solid fa-trash"></i></button>
                           </td>
@@ -226,10 +328,10 @@
                             <img src="./dashboard-assets/img/class-avatar.jpg" alt="">
                             <span class="mx-2">Classe 77</span>
                           </th>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">17 Feb 2021</span></td>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">20%</span></td>
-                          <td><span class="badge rounded-pill text-bg-warning">Process</span></td>
-                          <td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">17 Feb 2021</span></td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">20%</span></td>
+                          <td class="text-center"><span class="badge rounded-pill text-bg-warning">Process</span></td>
+                          <td class="text-center">
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class="py-1 fa-solid fa-pencil"></i></button>
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class=" py-1 fa-solid fa-trash"></i></button>
                           </td>
@@ -240,10 +342,10 @@
                             <img src="./dashboard-assets/img/class-avatar.jpg" alt="">
                             <span class="mx-2">Classe 78</span>
                           </th>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">18 Feb 2021</span></td>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">20%</span></td>
-                          <td><span class="badge rounded-pill text-bg-success">Dome</span></td>
-                          <td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">18 Feb 2021</span></td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">20%</span></td>
+                          <td class="text-center"><span class="badge rounded-pill text-bg-success">Dome</span></td>
+                          <td class="text-center">
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class="py-1 fa-solid fa-pencil"></i></button>
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class=" py-1 fa-solid fa-trash"></i></button>
                           </td>
@@ -254,10 +356,10 @@
                             <img src="./dashboard-assets/img/class-avatar.jpg" alt="">
                             <span class="mx-2">Classe 79</span>
                           </th>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">19 Feb 2021</span></td>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">20%</span></td>
-                          <td><span class="badge rounded-pill text-bg-danger">Dome</span></td>
-                          <td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">19 Feb 2021</span></td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">20%</span></td>
+                          <td class="text-center"><span class="badge rounded-pill text-bg-danger">Dome</span></td>
+                          <td class="text-center">
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class="py-1 fa-solid fa-pencil"></i></button>
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class=" py-1 fa-solid fa-trash"></i></button>
                           </td>
@@ -268,10 +370,10 @@
                             <img src="./dashboard-assets/img/class-avatar.jpg" alt="">
                             <span class="mx-2">Classe 80</span>
                           </th>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">20 Feb 2021</span></td>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">20%</span></td>
-                          <td><span class="badge rounded-pill text-bg-success">Dome</span></td>
-                          <td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">20 Feb 2021</span></td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">20%</span></td>
+                          <td class="text-center"><span class="badge rounded-pill text-bg-success">Dome</span></td>
+                          <td class="text-center">
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class="py-1 fa-solid fa-pencil"></i></button>
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class=" py-1 fa-solid fa-trash"></i></button>
                           </td>
@@ -282,10 +384,10 @@
                             <img src="./dashboard-assets/img/class-avatar.jpg" alt="">
                             <span class="mx-2">Classe 81</span>
                           </th>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">21 Feb 2021</span></td>
-                          <td class="d-none d-md-table-cell"><span class="pe-1">20%</span></td>
-                          <td><span class="badge rounded-pill text-bg-danger">Dome</span></td>
-                          <td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">21 Feb 2021</span></td>
+                          <td class="text-center d-none d-md-table-cell"><span class="pe-1">20%</span></td>
+                          <td class="text-center"><span class="badge rounded-pill text-bg-danger">Dome</span></td>
+                          <td class="text-center">
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class="py-1 fa-solid fa-pencil"></i></button>
                             <button type="button" class="btn btn-sm btn-outline-secondary"><i class=" py-1 fa-solid fa-trash"></i></button>
                           </td>
